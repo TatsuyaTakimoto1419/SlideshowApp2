@@ -35,12 +35,41 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // 再生中か停止しているかを判定
+        //collectionView.delegate = self
               
                  
     }
     
-   
+    var selectedImage : UIImage?
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+
+        
+
+        selectedImage =  imageArray[nowIndex]
+
+        if selectedImage != nil {
+
+            performSegue(withIdentifier: "toSubViewController", sender: nil)
+
+        }
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!){
+
+           if (segue.identifier == "toSubViewController"){
+
+               let subVC: ViewController2 = (segue.destination as? ViewController2)!
+
+               subVC.selectedImg = selectedImage
+
+           }
+
+       }
+    
+    
+    
    
     @IBAction func startButton(_ sender: Any) {
         if (timer == nil){
@@ -92,13 +121,17 @@ class ViewController: UIViewController {
         // indexをへらして表示する画像を戻す
                 nowIndex -= 1
 
-                // indexが表示予定の画像の数と同じ場合
-                if (nowIndex == 0) {
-                    // indexを一番最初の数字に戻す
+                
+                if (nowIndex < 0) {
+                     
                     nowIndex = 2
-                }
+                }else{
+                   
+        }
+        
+       image.image = imageArray[nowIndex]
                 // indexの画像をstoryboardの画像にセットする
-                image.image = imageArray[nowIndex]
+               
     }
     
     

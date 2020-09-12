@@ -52,11 +52,36 @@
                         <outlet property="button" destination="TsL-Q3-ekd" id="P1r-AX-gTg"/>
                         <outlet property="image" destination="bIb-gI-j74" id="kfw-4M-d1g"/>
                         <outlet property="nextButton" destination="zoC-5m-ZCQ" id="SaC-lX-V3t"/>
+                        <segue destination="IN6-Mt-mlj" kind="presentation" identifier="viewController2" id="ggG-5u-OKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="87.723214285714278"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="4Vx-GF-gbR">
+            <objects>
+                <viewController id="IN6-Mt-mlj" customClass="ViewController2" customModule="SlideshowApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cTm-dc-Qac">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHq-ea-tj8">
+                                <rect key="frame" x="20" y="20" width="374" height="788"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fJd-TY-PxT"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZHq-ea-tj8" id="wgj-w4-CN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2o-KM-Zjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>
