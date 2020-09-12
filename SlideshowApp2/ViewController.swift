@@ -35,40 +35,35 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //collectionView.delegate = self
+       // collectionView.delegate = self
               
                  
     }
     
     var selectedImage : UIImage?
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-
-        
-
-        selectedImage =  imageArray[nowIndex]
-
-        if selectedImage != nil {
-
-            performSegue(withIdentifier: "toSubViewController", sender: nil)
-
-        }
-
-    }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!){
 
-           if (segue.identifier == "toSubViewController"){
+           if (segue.identifier == "ViewController2"){
 
                let subVC: ViewController2 = (segue.destination as? ViewController2)!
 
-               subVC.selectedImg = selectedImage
+            selectedImage = imageArray[nowIndex]
+            subVC.selectedImg = selectedImage
+            
 
            }
 
        }
     
     
+    @IBAction func tap(_ sender: Any) {
+   
+
+        
+    }
     
    
     @IBAction func startButton(_ sender: Any) {

@@ -20,8 +20,7 @@ class ViewController2: UIViewController {
         
         imageView.image = selectedImg
 
-        imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        // Do any additional setup after loading the view.
+       
     }
     
 
