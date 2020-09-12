@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
    
+
+         
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
                           button.setTitle("停止", for: .normal)
             
             nextButton.isEnabled = false;
+            backButton.isEnabled = false;
             
             
                       }
@@ -92,7 +95,7 @@ class ViewController: UIViewController {
                          button.setTitle("再生", for: .normal)
             
             nextButton.isEnabled = true;
-            
+            backButton.isEnabled = true;
                       }
         
     }
@@ -138,9 +141,8 @@ class ViewController: UIViewController {
                    
                }
     }
-    
-    
-
-       
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+   
 }
 

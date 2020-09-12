@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBOutlet weak var backButtton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     var selectedImg: UIImage!
     
